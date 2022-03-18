@@ -1,0 +1,18 @@
+
+
+    .titulo {
+      font: inherit !important ;
+      font-weight: bold  !important;
+      color: #171f55 !important;
+      font-size: 50px  !important;
+    }
+    .imagen-detalle {
+      display: block;
+      margin: auto;
+      width: 500px;
+      /* 560 */
+    }
+
+  body {
+      background-image: url("https://www.viralizalo.com/imgentries/9056/f972979a583b397f550d79223b5244a912364.jpg?1647584210");
+      }

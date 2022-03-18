@@ -1,0 +1,24 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title DigiRandom
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css' integrity='sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn' crossorigin='anonymous')
+
+  link(rel='stylesheet' href='/stylesheets/random.css')
+  link(rel='stylesheet' href='/stylesheets/global.css')
+
+
+.container.shadow.p-3.mb-5.bg-white.rounded.bg-white
+  .row.justify-content-center
+    .col-8
+      .card.mb-3.align-right
+        .card-body
+          h1.card-title.text-center.titulo  #{digi.name} 
+        img.float-right.imagen-detalle.img-fluid.card-img-top(src=`${digi.img}` alt='...')
+        .card-body
+
+
+        a.btn.btn-primary.mb-2.ml-2(href=`/digimon/random`) ¡Otra vez!
+

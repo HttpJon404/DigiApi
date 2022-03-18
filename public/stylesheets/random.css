@@ -1,0 +1,17 @@
+
+.titulo {
+font: inherit !important ;
+font-weight: bold  !important;
+color: #171f55 !important;
+font-size: 50px  !important;
+}
+.imagen-detalle {
+display: block;
+margin: auto;
+width: 500px;
+
+}
+
+body {
+background-image: url("https://world.digimoncard.com/images/common/bg.png");
+}

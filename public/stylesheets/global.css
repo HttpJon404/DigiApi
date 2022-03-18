@@ -1,0 +1,12 @@
+body {
+    background-image: url("https://www.servytec.es/general/images/slider/bg-slider2.jpg");
+    }
+
+
+    .zoom {
+        transition: transform .2s; 
+      }
+  
+      .zoom:hover {
+        transform: scale(1.1); 
+      }

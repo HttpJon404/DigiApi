@@ -1,0 +1,77 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title DigiApi
+
+
+  link(rel='stylesheet' href='/stylesheets/style.css')
+  link(rel='stylesheet' href='/stylesheets/global.css')    
+
+  link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css' integrity='sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn' crossorigin='anonymous')
+
+body
+
+
+.container.shadow.p-3.mb-5.bg-white.rounded.bg-white
+
+  .row
+    .col-12
+      h1.text-center Digimon api Escaleno
+
+  .row
+
+
+    .form-inline.col-sm-12.col-md-6
+      img.logo(src='https://raw.githubusercontent.com/alvaropsouza/digidex-1.0/main/assets/digimon.png' alt='')
+      .w-100
+      .form-group.mx-sm-3.mb-2
+        .dropdown
+          button#dropdownMenuButton.btn.btn-naranjo.dropdown-toggle(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+            | Levels
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            each l in info 
+              a.dropdown-item(href=`/${l.level}`)=l.level
+
+
+      a.btn.btn-primary.mb-2.ml-2.btn-random(href=`/digimon/random`) ¡DigiRandom!
+    .col-sm-12.col-md-6
+      table.table.table-hover.table-bordered.table-sm
+        thead
+          tr.fondo-naranjo
+            th(scope='col') Level
+            th(scope='col') Cantidad
+        tbody
+
+          each inf in info  
+            tr
+              th #{inf.level}
+              td #{inf.cant}
+
+
+  h3.mt-4 Digimons encontrados: #{encontrados}
+  hr
+  .row.justify-content-center
+
+    each digi in digis
+
+      .card.m-3.zoom
+        img.img-fluid.card-img-top(src=`${digi.img}` style='max-width: 300px;' alt='...')
+        .card-body
+          h5.text-center.card-title= digi.name
+          p.card-text.text-center
+            | Level: 
+            strong=digi.level
+
+          .text-center
+
+            a.btn-sm.btn.btn-primary(href=`/detalle/${digi.name}`) Detalle
+
+
+
+script(src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js' integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj' crossorigin='anonymous')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF' crossorigin='anonymous')
+
+
+
